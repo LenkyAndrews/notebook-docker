@@ -1,0 +1,5 @@
+FROM python:3.8-slim-buster
+WORKDIR /app
+COPY . .
+RUN pip install -r requirements.txt -i  https://mirrors.aliyun.com/pypi/simple/
+CMD ["python","manage.py"]
